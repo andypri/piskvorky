@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#615dad, #ffc8da);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+
+.obsah {
+  width: 365px;
+  height: 610px;
+  background-color: #283e50;
+  border-radius: 10px 10px 0 0;
+  margin: 65px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.ctyrlistky img {
+  border-radius: 10px 10px 0 0;
+}
+
+.informace {
+  margin: 0;
+  padding: 0 15px;
+}
+
+.informace h1 {
+  margin: 30px 0;
+  font-family: 'Lobster', cursive;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 1.2;
+}
