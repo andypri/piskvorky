@@ -23,7 +23,7 @@ body {
   background-color: #283e50;
   border-radius: 10px 10px 0 0;
   margin: 65px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
   text-align: center;
@@ -46,4 +46,34 @@ body {
   font-weight: normal;
   font-size: 48px;
   line-height: 1.2;
+}
+
+.tlacitka {
+  display: flex;
+  flex-direction: column;
+}
+
+.tlacitka a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  padding: 15px 0;
+  font-size: 18px;
+}
+
+.tlacitko_pravidla {
+  background-color: #1fcca4;
+  border-bottom: 1px solid #283e50;
+}
+
+.tlacitko_pravidla:hover {
+  background-color: #1cbb96;
+}
+
+.tlacitko_nova_hra {
+  background-color: #0197f6;
+}
+
+.tlacitko_nova_hra:hover {
+  background-color: #0090e9;
 }
