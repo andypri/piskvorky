@@ -18,7 +18,7 @@ body {
   justify-content: center;
 }
 
-.obsah {
+.piskvorky {
   width: 365px;
   height: 610px;
   background-color: #283e50;
@@ -33,7 +33,9 @@ body {
   padding: 0;
 }
 
-.ctyrlistky img {
+.hlavicka__obrazek {
+  width: 365px;
+  height: 220px;
   border-radius: 10px 10px 0 0;
 }
 
@@ -42,7 +44,7 @@ body {
   padding: 20px 15px;
 }
 
-.nazev {
+.informace__nadpis {
   margin: 0;
   padding-bottom: 10px;
   font-family: 'Lobster', cursive;
@@ -51,12 +53,12 @@ body {
   line-height: 1.2;
 }
 
-.tlacitka {
+.tlacitko {
   display: flex;
   flex-direction: column;
 }
 
-.tlacitka a {
+.tlacitko a {
   text-decoration: none;
   color: #ffffff;
   display: block;
@@ -64,19 +66,19 @@ body {
   font-size: 18px;
 }
 
-.tlacitko_pravidla {
+.tlacitko--zelene {
   background-color: #1fcca4;
   border-bottom: 1px solid #283e50;
 }
 
-.tlacitko_pravidla:hover {
+.tlacitko--zelene:hover {
   background-color: #1cbb96;
 }
 
-.tlacitko_nova_hra {
+.tlacitko--modre {
   background-color: #0197f6;
 }
 
-.tlacitko_nova_hra:hover {
+.tlacitko--modre:hover {
   background-color: #0090e9;
 }
