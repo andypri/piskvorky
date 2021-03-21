@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(#615dad, #ffc8da);
-  height: 100vh;
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: flex;
@@ -90,7 +90,6 @@ body {
   flex-shrink: 1;
   min-width: 365px;
   max-width: 800px;
-  height: 100vh;
   background-color: #283e50;
   border-radius: 10px 10px 0 0;
   margin: 65px;
@@ -107,6 +106,7 @@ body {
 .prehled-pravidel {
   margin-top: 10px;
   padding: 30px;
+  flex-grow: 1;
 }
 
 .prehled-pravidel__nadpis {
@@ -131,23 +131,33 @@ body {
 }
 
 .ukazky-ze-hry {
+  padding: 30px;
+  flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .priklad {
-  margin: 0 0 30px 0;
-  flex: 1 0 200px;
+  margin: 0 10px 30px 10px;
+  flex-grow: 1;
   font-size: 16px;
   text-align: center;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .priklad__obrazek {
-  text-align: center;
+  width: 300px;
+}
+
+.priklad__text {
+  width: 300px;
 }
 
 .pravidla__tlacitko {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
