@@ -21,6 +21,8 @@ body {
 .piskvorky {
   width: 365px;
   height: 610px;
+  /* Doplněno: aby tlačítka nepřesahovala box */
+  overflow: visible;
   background-color: #283e50;
   border-radius: 10px 10px 0 0;
   margin: 65px;
@@ -53,12 +55,12 @@ body {
   line-height: 1.2;
 }
 
-.tlacitko {
+.piskvorky__tlacitko {
   display: flex;
   flex-direction: column;
 }
 
-.tlacitko a {
+.piskvorky__tlacitko a {
   text-decoration: none;
   color: #ffffff;
   display: block;
@@ -66,19 +68,112 @@ body {
   font-size: 18px;
 }
 
-.tlacitko--zelene {
+.piskvorky__tlacitko--zelene {
   background-color: #1fcca4;
   border-bottom: 1px solid #283e50;
 }
 
-.tlacitko--zelene:hover {
+.piskvorky__tlacitko--zelene:hover {
   background-color: #1cbb96;
 }
 
-.tlacitko--modre {
+.piskvorky__tlacitko--modre {
   background-color: #0197f6;
 }
 
-.tlacitko--modre:hover {
+.piskvorky__tlacitko--modre:hover {
+  background-color: #0090e9;
+}
+
+.pravidla {
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 365px;
+  max-width: 800px;
+  height: 100vh;
+  background-color: #283e50;
+  border-radius: 10px 10px 0 0;
+  margin: 65px;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.prehled-pravidel {
+  margin-top: 10px;
+  padding: 30px;
+}
+
+.prehled-pravidel__nadpis {
+  margin: 0;
+  padding-bottom: 10px;
+  font-family: 'Lobster', cursive;
+  font-weight: normal;
+  text-align: center;
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.prehled-pravidel__text li {
+  padding: 0 0 10px 10px;
+}
+
+.prehled-pravidel__text--kolecko-bile,
+.prehled-pravidel__text--krizek-bily {
+  width: 1em;
+  height: 1em;
+  filter: invert(100%);
+}
+
+.ukazky-ze-hry {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.priklad {
+  margin: 0 0 30px 0;
+  flex: 1 0 200px;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+}
+
+.priklad__obrazek {
+  text-align: center;
+}
+
+.pravidla__tlacitko {
+  display: flex;
+  flex-direction: column;
+}
+
+.pravidla__tlacitko a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 18px;
+}
+
+.pravidla__tlacitko--zelene {
+  background-color: #1fcca4;
+  border-bottom: 1px solid #283e50;
+}
+
+.pravidla__tlacitko--zelene:hover {
+  background-color: #1cbb96;
+}
+
+.pravidla__tlacitko--modre {
+  background-color: #0197f6;
+}
+
+.pravidla__tlacitko--modre:hover {
   background-color: #0090e9;
 }
