@@ -11,7 +11,6 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(#615dad, #ffc8da);
-  /* min-height: 100vh; */
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: flex;
@@ -20,7 +19,6 @@ body {
 
 .piskvorky {
   width: 365px;
-  /* height: 610px; */
   background-color: #283e50;
   border-radius: 10px 10px 0 0;
   margin: 3.25rem;
@@ -81,6 +79,7 @@ body {
   background-color: #0090e9;
 }
 
+/* mobile first: úzká obrazovka / mobilní zařízení */
 .pravidla {
   max-width: 800px;
   background-color: #283e50;
@@ -120,7 +119,6 @@ body {
   filter: invert(100%);
 }
 
-/* úzká obrazovka / mobilní zařízení */
 .ukazky-ze-hry {
   padding: 0;
 }
