@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(#615dad, #ffc8da);
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: flex;
@@ -20,15 +20,15 @@ body {
 
 .piskvorky {
   width: 365px;
-  height: 610px;
+  /* height: 610px; */
   background-color: #283e50;
   border-radius: 10px 10px 0 0;
-  margin: 65px;
+  margin: 3.25rem;
   box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
   text-align: center;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   padding: 0;
 }
@@ -41,22 +41,16 @@ body {
 
 .informace {
   margin: 0;
-  padding: 20px 15px;
+  padding: 1.25rem 0.938rem;
 }
 
 .informace__nadpis {
   margin: 0;
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
   font-family: 'Lobster', cursive;
   font-weight: normal;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 1.2;
-}
-
-.piskvorky__tlacitko {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
 }
 
 .piskvorky__tlacitko a {
@@ -64,8 +58,8 @@ body {
   color: #ffffff;
   display: block;
   text-align: center;
-  padding: 15px 0;
-  font-size: 18px;
+  padding: 0.938rem 0;
+  font-size: 1.1rem;
 }
 
 .piskvorky__tlacitko--zelene {
@@ -73,7 +67,8 @@ body {
   border-bottom: 1px solid #283e50;
 }
 
-.piskvorky__tlacitko--zelene:hover {
+.piskvorky__tlacitko--zelene:hover,
+.piskvorky__tlacitko--zelene:focus {
   background-color: #1cbb96;
 }
 
@@ -81,7 +76,8 @@ body {
   background-color: #0197f6;
 }
 
-.piskvorky__tlacitko--modre:hover {
+.piskvorky__tlacitko--modre:hover,
+.piskvorky__tlacitko--modre:focus {
   background-color: #0090e9;
 }
 
@@ -89,34 +85,32 @@ body {
   max-width: 800px;
   background-color: #283e50;
   border-radius: 10px 10px 0 0;
-  margin: 65px;
+  margin: 3.25rem;
   box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
   text-align: left;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 1.5;
-  display: flex;
-  flex-direction: column;
 }
 
 .prehled-pravidel {
-  margin-top: 10px;
-  padding: 30px 30px 10px 30px;
+  margin-top: 0.625rem;
+  padding: 0.625rem;
 }
 
 .prehled-pravidel__nadpis {
   margin: 0;
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
   font-family: 'Lobster', cursive;
   font-weight: normal;
   text-align: center;
-  font-size: 48px;
+  font-size: 2.5rem;
   line-height: 1.2;
 }
 
 .prehled-pravidel__text li {
-  padding: 0 0 10px 10px;
+  padding: 0 0 0.625rem 0.625rem;
 }
 
 .prehled-pravidel__text--kolecko-bile,
@@ -128,13 +122,13 @@ body {
 
 /* úzká obrazovka / mobilní zařízení */
 .ukazky-ze-hry {
-  padding: 0px;
+  padding: 0;
 }
 
 .priklad {
-  font-size: 15px;
+  font-size: 1rem;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .priklad__obrazek {
@@ -143,21 +137,30 @@ body {
 
 .priklad__text {
   font-style: italic;
-  padding-top: 5px;
+  padding-top: 0.3rem;
 }
 
 /* široká obrazovka / tablet */
 @media only screen and (min-width: 600px) {
+  .pravidla {
+    font-size: 1.2rem;
+  }
+  .prehled-pravidel__nadpis {
+    font-size: 3rem;
+  }
+  .prehled-pravidel {
+    padding: 1rem 1.5rem, 1rem 1rem;
+  }
   .ukazky-ze-hry {
-    padding: 30px 30px 0 30px;
+    padding: 1.875rem 1.875rem 0 1.875rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
   .priklad {
     margin: 0;
-    padding-bottom: 40px;
-    width: calc((100% - 30px) / 2);
+    padding-bottom: 2.5rem;
+    width: calc((100% - 1.875rem) / 2);
   }
 }
 
