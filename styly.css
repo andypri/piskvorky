@@ -7,6 +7,7 @@ html {
   box-sizing: inherit;
 }
 
+/* Pozadí všech stránek: */
 body {
   margin: 0;
   padding: 0;
@@ -17,6 +18,7 @@ body {
   justify-content: center;
 }
 
+/* Úvodní stránka: Piškvorky */
 .piskvorky {
   width: 365px;
   background-color: #283e50;
@@ -79,6 +81,7 @@ body {
   background-color: #0090e9;
 }
 
+/* Stránka s pravidly: */
 /* mobile first: úzká obrazovka / mobilní zařízení */
 .pravidla {
   max-width: 800px;
@@ -168,3 +171,97 @@ body {
     max-width: 1000px;
   }
 }
+
+/* Stránka hra: */
+.hra {
+  max-width: 80vmin;
+  margin: 10% 0;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+}
+
+.hlavicka__nadpis {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lobster', cursive;
+  font-weight: normal;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hlavicka__detail {
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 0;
+}
+
+.hrac {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  width: calc(((100% - 1rem) / 3) * 2);
+}
+
+.hrac__text {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-right: 2%;
+}
+
+.hrac--kolecko-bile {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  filter: invert(100%);
+}
+
+.hra__tlacitko {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: calc((100% - 1rem) / 3);
+}
+
+.hra__tlacitko a {
+  display: block;
+  margin: 0 3%;
+  padding: 3%;
+  border-radius: 5px;
+}
+
+.hra__tlacitko--zelene img,
+.hra__tlacitko--modre img {
+  width: 100%;
+}
+
+.hra__tlacitko--zelene {
+  background-color: #1fcca4;
+}
+
+.hra__tlacitko--zelene:hover,
+.hra__tlacitko--zelene:focus {
+  background-color: #1cbb96;
+}
+
+.hra__tlacitko--modre {
+  background-color: #0197f6;
+}
+
+.hra__tlacitko--modre:hover,
+.hra__tlacitko--modre:focus {
+  background-color: #0090e9;
+}
+
+.herni-pole {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+/* button {
+  padding: 0;
+  margin: 0;
+} */
