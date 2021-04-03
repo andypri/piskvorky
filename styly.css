@@ -175,10 +175,9 @@ body {
 /* Stránka hra: */
 .hra {
   max-width: 80vmin;
-  margin: 10% 0;
+  margin: 3% 0;
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
-  text-align: left;
 }
 
 .hlavicka__nadpis {
@@ -211,7 +210,7 @@ body {
   margin-right: 2%;
 }
 
-.hrac--kolecko-bile {
+.hrac__symbol--kolecko-bile {
   display: block;
   width: 1.2rem;
   height: 1.2rem;
@@ -256,12 +255,41 @@ body {
 }
 
 .herni-pole {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
+  border: 2px solid black;
+  border-right: none;
 }
 
-/* button {
+.herni-pole__rada {
+  width: 100%;
+  text-align: center;
+  display: flex;
   padding: 0;
-  margin: 0;
-} */
+  border-bottom: 2px solid black;
+}
+
+.herni-pole:last-child {
+  border-bottom: none;
+}
+
+/* Úzká obrazovka */
+button {
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  border-right: 2px solid black;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+button:hover,
+button:focus {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Široka obrazovka */
+@media only screen and (min-width: 600px) {
+  button {
+    width: 3rem;
+    height: 3rem;
+  }
+}
