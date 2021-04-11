@@ -282,7 +282,6 @@ button:hover,
 button:focus-within,
 button:active {
   background: rgba(255, 255, 255, 0.5);
-  outline: none;
 }
 
 /* pokus s obrázkem: ale nefungovalo */
