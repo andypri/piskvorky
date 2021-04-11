@@ -226,7 +226,6 @@ body {
 
 .hra__tlacitko a {
   display: block;
-  margin: 0 3%;
   padding: 3%;
   border-radius: 5px;
 }
@@ -238,6 +237,7 @@ body {
 
 .hra__tlacitko--zelene {
   background-color: #1fcca4;
+  margin-right: 5%;
 }
 
 .hra__tlacitko--zelene:hover,
@@ -255,41 +255,29 @@ body {
 }
 
 .herni-pole {
-  border: 2px solid black;
-  border-right: none;
-}
-
-.herni-pole__rada {
-  width: 100%;
-  text-align: center;
-  display: flex;
-  padding: 0;
-  border-bottom: 2px solid black;
-}
-
-.herni-pole:last-child {
-  border-bottom: none;
-}
-
-/* Úzká obrazovka */
-button {
-  padding: 0;
-  width: 1.5rem;
-  height: 1.5rem;
   border: none;
-  border-right: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  width: 80vmin;
+  height: 80vmin;
+  border: none;
   background: rgba(255, 255, 255, 0.3);
 }
 
-button:hover,
-button:focus {
-  background: rgba(255, 255, 255, 0.4);
+button {
+  padding: 0;
+  margin: 0;
+  flex: 0 0 calc(100% / 10);
+  height: calc(100% / 10);
+  border: 1px solid black;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 
-/* Široka obrazovka */
-@media only screen and (min-width: 600px) {
-  button {
-    width: 3rem;
-    height: 3rem;
-  }
+button:hover,
+button:focus-within,
+button:active {
+  background: rgba(255, 255, 255, 0.5);
+  outline: none;
 }
