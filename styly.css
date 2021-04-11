@@ -175,7 +175,7 @@ body {
 /* Stránka hra: */
 .hra {
   max-width: 80vmin;
-  margin: 3% 0;
+  margin: 1% 0;
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
 }
@@ -193,7 +193,7 @@ body {
 .hlavicka__detail {
   display: flex;
   justify-content: space-between;
-  margin: 5% 0;
+  margin: 1% 0;
 }
 
 .hrac {
@@ -210,7 +210,7 @@ body {
   margin-right: 2%;
 }
 
-.hrac__symbol--kolecko-bile {
+.hrac__symbol {
   display: block;
   width: 1.2rem;
   height: 1.2rem;
@@ -266,16 +266,15 @@ body {
 }
 
 button {
-  padding: 1%;
+  padding: 0;
   margin: 0;
   flex: 0 0 calc(100% / 10);
   height: calc(100% / 10);
   border: 1px solid black;
   background: rgba(255, 255, 255, 0.2);
   cursor: pointer;
-  /* pokus s obrázkem: ale nefungovalo */
-  /* text-align: center;
-  position: relative; */
+  text-align: center;
+  position: relative;
 }
 
 button:hover,
@@ -284,47 +283,20 @@ button:active {
   background: rgba(255, 255, 255, 0.5);
 }
 
-/* pokus s obrázkem: ale nefungovalo */
-/* button img {
+button img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   position: absolute;
-  top: 0px;
-  left: 0px;
-  display: none;
-} */
-
-.button--circle {
-  background-image: url(circle.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 80%;
+  top: 5%;
+  left: 5%;
+  visibility: hidden;
 }
 
-.button--circle,
-.button--circle:focus-within,
-.button--circle:active,
-.button--circle:enabled {
-  background-image: url(circle.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 80%;
+.button--circle .circle {
+  visibility: visible;
 }
 
-.button--cross {
-  background-image: url(cross.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 80%;
-}
-
-.button--cross,
-.button--cross:focus-within,
-.button--cross:active,
-.button--cross:enabled {
-  background-image: url(cross.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 80%;
+.button--cross .cross {
+  visibility: visible;
 }
