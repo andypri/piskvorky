@@ -290,13 +290,13 @@ button img {
   position: absolute;
   top: 5%;
   left: 5%;
-  visibility: hidden;
+  display: none;
 }
 
 .button--circle .circle {
-  visibility: visible;
+  display: block;
 }
 
 .button--cross .cross {
-  visibility: visible;
+  display: block;
 }
