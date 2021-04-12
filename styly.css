@@ -186,7 +186,7 @@ body {
   font-family: 'Lobster', cursive;
   font-weight: normal;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 1.2;
 }
 
@@ -205,7 +205,7 @@ body {
 
 .hrac__text {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 900;
   margin-right: 2%;
 }
@@ -266,7 +266,7 @@ body {
 }
 
 button {
-  padding: 0;
+  padding: 0.2rem;
   margin: 0;
   flex: 0 0 calc(100% / 10);
   height: calc(100% / 10);
@@ -285,18 +285,26 @@ button:active {
 
 button img {
   display: block;
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 80%;
   position: absolute;
-  top: 5%;
-  left: 5%;
+  top: 10%;
+  left: 10%;
   display: none;
 }
 
-.button--circle .circle {
-  display: block;
-}
-
+.button--circle .circle,
 .button--cross .cross {
   display: block;
+  animation-duration: 0.45s;
+  animation-name: grow;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
