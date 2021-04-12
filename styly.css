@@ -266,14 +266,13 @@ body {
 }
 
 button {
-  padding: 0.2rem;
+  padding: 0;
   margin: 0;
   flex: 0 0 calc(100% / 10);
   height: calc(100% / 10);
   border: 1px solid black;
   background: rgba(255, 255, 255, 0.2);
   cursor: pointer;
-  text-align: center;
   position: relative;
 }
 
@@ -284,9 +283,11 @@ button:active {
 }
 
 button img {
-  display: block;
+  padding: 0;
   width: 80%;
   height: 80%;
+  vertical-align: middle;
+  align-self: center;
   position: absolute;
   top: 10%;
   left: 10%;
@@ -295,8 +296,8 @@ button img {
 
 .button--circle .circle,
 .button--cross .cross {
-  display: block;
-  animation-duration: 0.45s;
+  display: inline-block;
+  animation-duration: 0.15s;
   animation-name: grow;
 }
 
