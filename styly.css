@@ -261,19 +261,20 @@ body {
   padding: 0;
   width: 80vmin;
   height: 80vmin;
-  border: none;
   background: rgba(255, 255, 255, 0.3);
 }
 
 button {
   padding: 0;
   margin: 0;
-  flex: 0 0 calc(100% / 10);
+  width: calc(100% / 10);
   height: calc(100% / 10);
   border: 1px solid black;
   background: rgba(255, 255, 255, 0.2);
   cursor: pointer;
-  position: relative;
+  overflow: visible;
+  background-size: 0;
+  transition: ease-in 0.15s background-size;
 }
 
 button:hover,
@@ -282,30 +283,36 @@ button:active {
   background: rgba(255, 255, 255, 0.5);
 }
 
-button img {
-  padding: 0;
-  width: 80%;
-  height: 80%;
-  vertical-align: middle;
-  align-self: center;
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  display: none;
+.button--circle {
+  background-image: url(circle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
 }
 
-.button--circle .circle,
-.button--cross .cross {
-  display: inline-block;
-  animation-duration: 0.15s;
-  animation-name: grow;
+.button--cross {
+  background-image: url(cross.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
 }
 
-@keyframes grow {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
+.button--circle:hover,
+.button--circle:focus-within,
+.button--circle:active {
+  background: rgba(255, 255, 255, 0.5);
+  background-image: url(circle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+}
+
+.button--cross:hover,
+.button--cross:focus-within,
+.button--cross:active {
+  background: rgba(255, 255, 255, 0.5);
+  background-image: url(cross.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
 }
