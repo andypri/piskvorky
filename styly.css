@@ -288,6 +288,7 @@ button:active {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70%;
+  background-origin: border-box;
 }
 
 .button--cross {
@@ -305,6 +306,7 @@ button:active {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70%;
+  background-origin: border-box;
 }
 
 .button--cross:hover,
