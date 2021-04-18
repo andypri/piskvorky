@@ -21,7 +21,7 @@ for (let i = 0; i < tlacitka.length; i += 1) {
 
         vyherniTah(tlacitkoPoStisknuti);
         if (vyherniTah(tlacitkoPoStisknuti) === true) {
-          alert('Vyhrálo kolečko.');
+          novaHra('Vyhrálo kolečko. Spustit novou hru?');
         }
       } else if (hracNaTahu === 'cross') {
         tlacitkoPoStisknuti.classList.replace('btn--empty', 'button--cross');
@@ -31,7 +31,7 @@ for (let i = 0; i < tlacitka.length; i += 1) {
 
         vyherniTah(tlacitkoPoStisknuti);
         if (vyherniTah(tlacitkoPoStisknuti) === true) {
-          alert('Vyhrál křížek.');
+          novaHra('Vyhrál křížek. Spustit novou hru?');
         }
       }
     }
@@ -141,4 +141,11 @@ const vyherniTah = (tlacitko) => {
   }
 
   return false;
+};
+
+const novaHra = (message) => {
+  let ano = confirm(message);
+  if (ano === true) {
+    location.reload();
+  }
 };
