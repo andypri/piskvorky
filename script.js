@@ -21,7 +21,9 @@ for (let i = 0; i < tlacitka.length; i += 1) {
 
         vyherniTah(tlacitkoPoStisknuti);
         if (vyherniTah(tlacitkoPoStisknuti) === true) {
-          novaHra('Vyhrálo kolečko. Spustit novou hru?');
+          setTimeout(() => {
+            novaHra('Vyhrálo kolečko. Spustit novou hru?');
+          }, 150);
         }
       } else if (hracNaTahu === 'cross') {
         tlacitkoPoStisknuti.classList.replace('btn--empty', 'button--cross');
@@ -31,7 +33,9 @@ for (let i = 0; i < tlacitka.length; i += 1) {
 
         vyherniTah(tlacitkoPoStisknuti);
         if (vyherniTah(tlacitkoPoStisknuti) === true) {
-          novaHra('Vyhrál křížek. Spustit novou hru?');
+          setTimeout(() => {
+            novaHra('Vyhrál křížek. Spustit novou hru?');
+          }, 150);
         }
       }
     }
@@ -149,3 +153,66 @@ const novaHra = (message) => {
     location.reload();
   }
 };
+
+// // záloha:
+// const vyherniTah = (tlacitko) => {
+//   const zakladniPozice = ziskejPozici(tlacitko);
+//   const symbol = ziskejSymbol(tlacitko);
+
+//   let i;
+
+//   let vRadku = 1; // jednička pro právě vybrané tlačítko
+
+//   // koukni doleva:
+//   i = zakladniPozice.sloupec; // získám číslo sloupce z objektu získaného pomocí funkce ziskejPozici
+//   while (
+//     i > 0 &&
+//     symbol === ziskejSymbol(ziskejTlacitko(zakladniPozice.radek, i - 1))
+//   ) {
+//     vRadku += 1;
+//     i -= 1;
+//   }
+
+//   // koukni doprava:
+//   i = zakladniPozice.sloupec;
+//   while (
+//     i < herniPole - 1 &&
+//     symbol === ziskejSymbol(ziskejTlacitko(zakladniPozice.radek, i + 1))
+//   ) {
+//     vRadku += 1;
+//     i += 1;
+//   }
+
+//   // porovnání s počtem výherních symbolů
+//   if (vRadku >= pocetVyhernichSymbolu) {
+//     return true;
+//   }
+
+//   let veSloupci = 1;
+
+//   // koukni nahoru:
+//   i = zakladniPozice.radek;
+//   while (
+//     i > 0 &&
+//     symbol === ziskejSymbol(ziskejTlacitko(i - 1, zakladniPozice.sloupec))
+//   ) {
+//     veSloupci += 1;
+//     i -= 1;
+//   }
+
+//   // koukni dolů:
+//   i = zakladniPozice.radek;
+//   while (
+//     i < herniPole &&
+//     symbol === ziskejSymbol(ziskejTlacitko(i + 1, zakladniPozice.sloupec))
+//   ) {
+//     veSloupci += 1;
+//     i += 1;
+//   }
+
+//   if (veSloupci >= pocetVyhernichSymbolu) {
+//     return true;
+//   }
+
+//   return false;
+// };
